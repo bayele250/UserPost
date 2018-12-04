@@ -1,0 +1,34 @@
+<div >
+    <div class="col s8 offset-s2">
+      <div class="card">
+        <div class="card-header center-align">
+          <h2>New Post</h2>
+        </div>
+
+      <div class="card-body center-align"> 
+        <form class="col s12 white" #userPostForm="ngForm" (ngSubmit)="OnSubmit(userPostForm)">
+          <div class="row">
+                <div class="input-field col s6">
+                  <input class="validate" type="text" name="postTitle" #postTitle="ngModel" [(ngModel)]="post.Title" required minlength="2" maxlength="24">
+                  <label [attr.data-error]="postTitle.errors!=null?(postTitle.errors.required?'Required field!':'Minimum 2 and Maximum 24 characters needed'):''">Title</label>
+                </div>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s6">
+                <input class="validate" type="text" name="postBody" #postBody="ngModel" [(ngModel)]="post.Body" required minlength="5" maxlength="50">
+                <label [attr.data-error]="postBody.errors!=null?(postBody.errors.required?'Required field!':'Minimum 5 and Maximum 50 characters needed'):''">Body</label>
+              </div>
+        </div>
+  
+          <div class="row">
+              <div class="input-field col s12">
+                <button [disabled]="!userPostForm.valid" class="btn btn-primary btn-lg btn-block accent-3" type="submit">Submit</button>
+              </div>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

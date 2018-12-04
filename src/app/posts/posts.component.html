@@ -1,0 +1,16 @@
+<div style="margin-left: 25px; margin-right: 25px;">
+    <h3>Posts</h3>
+    <table class="table-hover">
+      <tr *ngFor="let p of post">
+        <td> 
+          <div class="card w-85">
+              <div class="card-body">
+                <h5 class="card-title">{{p.title}}</h5>
+                <p class="card-text">{{p.body}}</p>               
+              </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
+  

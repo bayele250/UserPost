@@ -1,0 +1,24 @@
+<div>
+  <table mdbTable class="table table-hover">
+    <thead>
+      <td>ID</td>
+      <td>Name</td>
+      <td>User Name</td>
+      <td>Email</td>
+      <td>Street</td>
+      <td>Suite</td>
+      <td>City</td>
+      <td>Zipcode</td>
+    </thead>
+    <tr *ngFor="let user of allUser">
+      <td> <a [routerLink]="[user.id]">{{user.id}}</a></td>
+      <td> {{user.name}}</td>
+      <td> {{user.username}}</td>
+      <td> {{user.email}}</td>
+      <td> {{user.address.street}}</td>
+      <td> {{user.address.suite}}</td>
+      <td> {{user.address.city}}</td>
+      <td> {{user.address.zipcode}}</td>    
+    </tr>
+  </table>
+</div>

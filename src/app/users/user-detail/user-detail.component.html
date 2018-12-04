@@ -1,0 +1,63 @@
+<div class="card" style="width: 80rem; margin-left: 20px;">
+  <div class="card-body">
+      <a routerLink="../" class="btn btn-primary">Back to Users</a>
+      <br>
+      <br>
+    <table class="table">
+      <tr>
+        <td colspan="6">
+            <h5 class="card-header">Detail about {{user.name}}</h5>
+        </td>
+      </tr>
+      <tr class="td-align">
+        <td><h6 class="card-title">User Name: </h6></td>
+        <td class="td-align">{{user.username}}</td>
+        <td><h6 class="card-title">User ID: </h6></td>
+        <td class="td-align">{{user.id}}</td>
+        <td><h6 class="card-title">Email: </h6></td>
+        <td class="td-align">{{user.email}}</td>
+      </tr>
+      <tr class="card-header">
+        <td colspan="6"><h5 class="card-header">Address</h5></td>
+      </tr>
+      <tr >
+          <td><h6 class="card-title">Street: </h6></td>
+          <td class="td-align">{{user.address.street}} Suite: {{user.address.suite}}</td>
+          <td><h6 class="card-title"> City:</h6></td>
+          <td class="td-align">{{user.address.city}}</td>
+          <td><h6 class="card-title">Zipcode </h6></td>
+          <td class="td-align">{{user.address.zipcode}}</td>
+      </tr>
+      <tr >
+            <td><h6 class="card-title">Lat: </h6></td>
+            <td class="td-align">{{user.address.geo.lat}}</td>
+            <td><h6 class="card-title"> Lng:</h6></td>
+            <td class="td-align">{{user.address.geo.lng}}</td>
+            <td></td>
+            <td class="td-align"></td>
+        </tr>
+        <tr >
+              <td><h6 class="card-title">Phone: </h6></td>
+              <td class="td-align">{{user.phone}}</td>
+              <td><h6 class="card-title"> Website:</h6></td>
+              <td class="td-align">{{user.website}}</td>
+              <td></td>
+              <td class="td-align"></td>
+        </tr>
+
+          <tr class="card-header">
+              <td colspan="6"><h5 class="card-header">Company</h5></td>
+          </tr>
+          <tr >
+                <td><h6 class="card-title">Name: </h6></td>
+                <td class="td-align">{{user.company.name}}</td>
+                <td><h6 class="card-title"> catchPhrase:</h6></td>
+                <td class="td-align">{{user.company.catchPhrase}}</td>
+                <td><h6 class="card-title">bs </h6></td>
+                <td class="td-align">{{user.company.bs}}</td>
+          </tr>
+    </table>    
+  </div>
+</div>
+
+
